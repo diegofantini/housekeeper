@@ -22,5 +22,6 @@ Instruções de uso:
 3. Execute o script com o seguinte comando: .\multipath.ps1 (exemplo para o arquivo multipath.ps1)
 
 Instruções execução Zabbix como UserParameter:
-1. Crie um item dentro do host, do tipo zabbix agent (ativo ou passivo), com tipo de informação log ou texto e passe uma chave
-2. No arquivo de configuração do Zabbix, no campo UserParameter, passe dessa forma: UserParameter=nome-chave,powershell.exe -NoLogo -NoProfile -Noninteractive -ExecutionPolicy Bypass -File C:\Temp\nome-arquivo.ps1
+1. Crie um item dentro do host, do tipo zabbix agent (ativo ou passivo), com tipo de informação log ou texto e passe uma chave.
+2. Salve o script em algum diretório no Windows (host).
+3. No arquivo de configuração do Zabbix, no campo UserParameter, passe dessa forma: UserParameter=nome-chave,powershell.exe -NoLogo -NoProfile -Noninteractive -ExecutionPolicy Bypass -File C:\path\nome-arquivo.ps1
