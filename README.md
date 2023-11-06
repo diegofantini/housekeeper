@@ -1,6 +1,6 @@
 
 Descrição
-Este script PowerShell limpa os arquivos temporários de qualquer pasta do windows.
+Limpa os arquivos de qualquer pasta do windows.
 
 Benefícios:
 
