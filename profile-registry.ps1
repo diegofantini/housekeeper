@@ -1,3 +1,5 @@
+Import-Module ActiveDirectory
+
 $numericProfiles = Get-ChildItem -Path C:\Users | Where-Object { $_.PSIsContainer -and $_.Name -match '^\d+$' }
 
 if ($numericProfiles.Count -eq 0) {
