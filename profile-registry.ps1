@@ -47,10 +47,10 @@ if ($numericProfiles.Count -eq 0) {
             $registryPath = "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList\$($user.Sid)"
 
             try {
-                Write-Host "Removendo entradas do Registro do user: $($user.SamAccountName)"
+                Write-Host "Removendo Registro do user: $($user.SamAccountName)"
                 Remove-Item -Path $registryPath -Force -Confirm:$false -Recurse -ErrorAction Stop
             } catch {
-                Write-Host "Erro ao remover entradas do Registro do user $($user.SamAccountName): $_"
+                Write-Host "Erro ao remover Registro do user $($user.SamAccountName): $_"
                 continue
             }
         }
