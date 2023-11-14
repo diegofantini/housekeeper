@@ -17,11 +17,7 @@ if ($numericUsers.Count -eq 0) {
         }
 
         if (-not $isSessionActive) {
-            
-            Write-Host "Removendo user do AD: $($user.SamAccountName)"
-            Remove-ADUser -Identity $user.SamAccountName -Confirm:$false
 
-            
             $userFolder = "C:\Users\" + $user.SamAccountName
             Write-Host "Removendo arquivos do user: $($user.SamAccountName)"
             Remove-Item $userFolder -Force -Confirm:$false -Recurse -ErrorAction Ignore
