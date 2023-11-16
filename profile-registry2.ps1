@@ -1,5 +1,3 @@
-Import-Module ActiveDirectory
-
 $userProfiles = Get-ChildItem -Path C:\Users -Directory
 
 $numericProfiles = $userProfiles | Where-Object { $_.PSIsContainer -and $_.Name -match '^\d+$' }
